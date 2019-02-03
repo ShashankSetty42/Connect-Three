@@ -1,4 +1,4 @@
-package com.shashank.tictactoe;
+package com.shashank.ConnectThree;
 
 import org.junit.Test;
 

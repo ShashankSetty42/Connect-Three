@@ -39,11 +39,13 @@
         android:layout_height="100dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="284dp"
+        android:clickable="true"
         android:foregroundGravity="center"
-        android:onClick="oneG"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/imageView"
-        android:clickable="true"/>
+        app:srcCompat="@drawable/transp"
+        android:onClick="clickedLayout"
+        android:tag="0"/>
 
     <ImageView
         android:id="@+id/two"
@@ -51,10 +53,12 @@
         android:layout_height="100dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="150dp"
-        android:onClick="twoG"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/imageView"
-        android:clickable="true"/>
+        android:clickable="true"
+        app:srcCompat="@drawable/transp"
+        android:onClick="clickedLayout"
+        android:tag="1"/>
 
     <ImageView
         android:id="@+id/three"
@@ -62,10 +66,12 @@
         android:layout_height="100dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="15dp"
-        android:onClick="threeG"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/imageView"
-        android:clickable="true"/>
+        android:clickable="true"
+        app:srcCompat="@drawable/transp"
+        android:onClick="clickedLayout"
+        android:tag="2"/>
 
 
     <ImageView
@@ -75,10 +81,12 @@
         android:layout_marginTop="152dp"
         android:layout_marginEnd="285dp"
         android:layout_weight="1"
-        android:onClick="fourG"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/imageView"
-        android:clickable="true"/>
+        android:clickable="true"
+        app:srcCompat="@drawable/transp"
+        android:onClick="clickedLayout"
+        android:tag="3"/>
 
     <ImageView
         android:id="@+id/five"
@@ -86,10 +94,12 @@
         android:layout_height="100dp"
         android:layout_marginTop="152dp"
         android:layout_marginEnd="150dp"
-        android:onClick="fiveG"
+        android:clickable="true"
+        android:onClick="clickedLayout"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/imageView"
-        android:clickable="true"/>
+        app:srcCompat="@drawable/transp"
+        android:tag="4"/>
 
     <ImageView
         android:id="@+id/six"
@@ -97,10 +107,12 @@
         android:layout_height="100dp"
         android:layout_marginTop="152dp"
         android:layout_marginEnd="15dp"
-        android:onClick="sixG"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/imageView"
-        android:clickable="true"/>
+        android:clickable="true"
+        app:srcCompat="@drawable/transp"
+        android:onClick="clickedLayout"
+        android:tag="5"/>
 
 
     <ImageView
@@ -109,10 +121,12 @@
         android:layout_height="100dp"
         android:layout_marginTop="280dp"
         android:layout_marginEnd="285dp"
-        android:onClick="sevenG"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/imageView"
-        android:clickable="true"/>
+        android:clickable="true"
+        app:srcCompat="@drawable/transp"
+        android:onClick="clickedLayout"
+        android:tag="6"/>
 
     <ImageView
         android:id="@+id/eight"
@@ -120,10 +134,12 @@
         android:layout_height="100dp"
         android:layout_marginTop="280dp"
         android:layout_marginEnd="150dp"
-        android:onClick="eightG"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/imageView"
-        android:clickable="true"/>
+        android:clickable="true"
+        app:srcCompat="@drawable/transp"
+        android:onClick="clickedLayout"
+        android:tag="7"/>
 
     <ImageView
         android:id="@+id/nine"
@@ -131,10 +147,12 @@
         android:layout_height="100dp"
         android:layout_marginTop="280dp"
         android:layout_marginEnd="15dp"
-        android:onClick="nineG"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/imageView"
-        android:clickable="true"/>
+        android:clickable="true"
+        app:srcCompat="@drawable/transp"
+        android:onClick="clickedLayout"
+        android:tag="8"/>
 
     <ImageView
         android:id="@+id/imageView"
@@ -175,6 +193,17 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_end="120dp" />
+
+    <TextView
+        android:id="@+id/currentPlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="52dp"
+        android:text="Player One"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </android.support.constraint.ConstraintLayout>

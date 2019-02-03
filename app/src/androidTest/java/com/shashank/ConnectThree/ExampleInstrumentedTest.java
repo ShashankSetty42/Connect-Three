@@ -1,4 +1,4 @@
-package com.shashank.tictactoe;
+package com.shashank.ConnectThree;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
