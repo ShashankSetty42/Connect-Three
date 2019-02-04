@@ -7,6 +7,10 @@
         <item name="colorPrimaryDark">@android:color/white</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:windowLightStatusBar">true</item>
+
+    </style>
+    <style name="customizedAlertSlideUpAndDown" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@drawable/dialogbox</item>
     </style>
 
 </resources>
