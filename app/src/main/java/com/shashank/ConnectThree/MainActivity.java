@@ -317,8 +317,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         new AlertDialog.Builder(this)
-                .setTitle("Closing Activity")
-                .setMessage("Are you sure you want to close this activity?")
+                .setTitle("Exit")
+                .setMessage("Are you sure you want to exit?")
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener()
                 {
                     @Override
