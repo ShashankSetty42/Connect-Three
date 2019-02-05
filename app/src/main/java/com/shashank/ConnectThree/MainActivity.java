@@ -13,19 +13,19 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-
+    //default funct
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ImageView player = (ImageView) findViewById(R.id.currentPlayer);
+        ImageView player = (ImageView) findViewById(R.id.currentPlayer); //set current player 1 after reset
         player.setImageResource(R.drawable.x);
     }
-
+    //global initialisation
     int[] grid = {2,2,2,2,2,2,2,2,2};
     int player = 0; //0 is player 1 and 1 is player 2
     int displayPl;
-
+    //set current player
     public void setPlayer(){
         ImageView currentPlayer = (ImageView) findViewById(R.id.currentPlayer);
         if(player == 0){
@@ -34,14 +34,14 @@ public class MainActivity extends AppCompatActivity {
         else
             currentPlayer.setImageResource(R.drawable.x);
     }
-
+    //check if current grid is empty
     public boolean isEmpty(int check){
         if(grid[check]<2)
             return false;
         else
             return true;
     }
-
+    //check equal for win condition
     public boolean isEq(int a, int b, int c){
         if((a<2) && (b<2) && (c<2)){
             if((a == b) && (b == c)) {
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
             return false;
     }
-
+    //check if someone won
     public boolean isWin(){
         ImageView board = (ImageView) findViewById(R.id.imageView);
         int winner = player + 1;
@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
         return false;
 
     }
-
+    //check draw condition
     public boolean isDraw(){
         int flag = 0;
 
@@ -120,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
         else
         return false;
     }
-
+    //main logic to set clicked player
     public void clickedLayout(View view){
         ImageView clicked = (ImageView) view;
         if(isEmpty(Integer.parseInt(clicked.getTag().toString()))) {
@@ -157,16 +157,63 @@ public class MainActivity extends AppCompatActivity {
                 }
         }
     }
+    //reset board
+    public void resetBoard(){
+        for(int i=0; i<9; i++){
+            grid[i]=2;
+        }
+
+        setPlayer();
+        ImageView one = (ImageView) findViewById(R.id.one);
+        ImageView two = (ImageView) findViewById(R.id.two);
+        ImageView three = (ImageView) findViewById(R.id.three);
+        ImageView four = (ImageView) findViewById(R.id.four);
+        ImageView five = (ImageView) findViewById(R.id.five);
+        ImageView six = (ImageView) findViewById(R.id.six);
+        ImageView seven = (ImageView) findViewById(R.id.seven);
+        ImageView eight = (ImageView) findViewById(R.id.eight);
+        ImageView nine = (ImageView) findViewById(R.id.nine);
+
+        one.setEnabled(true);
+        two.setEnabled(true);
+        three.setEnabled(true);
+        four.setEnabled(true);
+        five.setEnabled(true);
+        six.setEnabled(true);
+        seven.setEnabled(true);
+        eight.setEnabled(true);
+        nine.setEnabled(true);
+
+        one.setImageResource(R.drawable.transp);
+        one.animate().rotation(0);
+        two.setImageResource(R.drawable.transp);
+        two.animate().rotation(0);
+        three.setImageResource(R.drawable.transp);
+        three.animate().rotation(0);
+        four.setImageResource(R.drawable.transp);
+        four.animate().rotation(0);
+        five.setImageResource(R.drawable.transp);
+        five.animate().rotation(0);
+        six.setImageResource(R.drawable.transp);
+        six.animate().rotation(0);
+        seven.setImageResource(R.drawable.transp);
+        seven.animate().rotation(0);
+        eight.setImageResource(R.drawable.transp);
+        eight.animate().rotation(0);
+        nine.setImageResource(R.drawable.transp);
+        nine.animate().rotation(0);
+
+        ImageView player = (ImageView) findViewById(R.id.currentPlayer);
+        player.setImageResource(R.drawable.x);
+
+        ImageView gridImg = (ImageView) findViewById(R.id.imageView);
+        gridImg.setImageResource(R.drawable.grid);
+    }
 
     int draw = 0;
-
+    //set everything to unclickable
     public void endGame(){
-       // int winnerr = player+1;
-        String winner;
-        if(player == 0)
-            winner = "One";
-        else
-            winner = "Two";
+        int winner = player + 1;
         player = 0;
         ImageView one = (ImageView) findViewById(R.id.one);
         ImageView two = (ImageView) findViewById(R.id.two);
@@ -194,134 +241,25 @@ public class MainActivity extends AppCompatActivity {
         nine.setEnabled(false);
 
         if(draw == 1) {
-            new AlertDialog.Builder(this)
-                    .setTitle(" ")
-                    .setMessage("It's a draw!")
-                    .setPositiveButton("Play again", new DialogInterface.OnClickListener()
-                    {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            for(int i=0; i<9; i++){
-                                grid[i]=2;
-                            }
 
-                            setPlayer();
-                            ImageView one = (ImageView) findViewById(R.id.one);
-                            ImageView two = (ImageView) findViewById(R.id.two);
-                            ImageView three = (ImageView) findViewById(R.id.three);
-                            ImageView four = (ImageView) findViewById(R.id.four);
-                            ImageView five = (ImageView) findViewById(R.id.five);
-                            ImageView six = (ImageView) findViewById(R.id.six);
-                            ImageView seven = (ImageView) findViewById(R.id.seven);
-                            ImageView eight = (ImageView) findViewById(R.id.eight);
-                            ImageView nine = (ImageView) findViewById(R.id.nine);
+            DrawDialog draw = new DrawDialog();;
+            draw.show(getSupportFragmentManager(), "draw diag");
 
-                            one.setEnabled(true);
-                            two.setEnabled(true);
-                            three.setEnabled(true);
-                            four.setEnabled(true);
-                            five.setEnabled(true);
-                            six.setEnabled(true);
-                            seven.setEnabled(true);
-                            eight.setEnabled(true);
-                            nine.setEnabled(true);
-
-                            one.setImageResource(R.drawable.transp);
-                            one.animate().rotation(0);
-                            two.setImageResource(R.drawable.transp);
-                            two.animate().rotation(0);
-                            three.setImageResource(R.drawable.transp);
-                            three.animate().rotation(0);
-                            four.setImageResource(R.drawable.transp);
-                            four.animate().rotation(0);
-                            five.setImageResource(R.drawable.transp);
-                            five.animate().rotation(0);
-                            six.setImageResource(R.drawable.transp);
-                            six.animate().rotation(0);
-                            seven.setImageResource(R.drawable.transp);
-                            seven.animate().rotation(0);
-                            eight.setImageResource(R.drawable.transp);
-                            eight.animate().rotation(0);
-                            nine.setImageResource(R.drawable.transp);
-                            nine.animate().rotation(0);
-
-                            ImageView player = (ImageView) findViewById(R.id.currentPlayer);
-                            player.setImageResource(R.drawable.x);
-
-                            ImageView gridImg = (ImageView) findViewById(R.id.imageView);
-                            gridImg.setImageResource(R.drawable.grid);
-                        }
-
-                    })
-                    .setNegativeButton("Nice", null)
-                    .show();
         }
         else{
 
-            new AlertDialog.Builder(this)
-                    .setTitle(" ")
-                    .setMessage("Congrats! Player " + winner +" wins!")
-                    .setPositiveButton("Play again", new DialogInterface.OnClickListener()
-                    {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            for(int i=0; i<9; i++){
-                                grid[i]=2;
-                            }
+            if(winner == 1) {
+                PlayerOneWinDialog oneDialog = new PlayerOneWinDialog();
+                oneDialog.show(getSupportFragmentManager(), "oneWIn diag");
+            }
+            else {
+                PlayerTwoWinDialog twoDialog = new PlayerTwoWinDialog();
+                twoDialog.show(getSupportFragmentManager(), "twoWin diag");
+            }
 
-                            setPlayer();
-                            ImageView one = (ImageView) findViewById(R.id.one);
-                            ImageView two = (ImageView) findViewById(R.id.two);
-                            ImageView three = (ImageView) findViewById(R.id.three);
-                            ImageView four = (ImageView) findViewById(R.id.four);
-                            ImageView five = (ImageView) findViewById(R.id.five);
-                            ImageView six = (ImageView) findViewById(R.id.six);
-                            ImageView seven = (ImageView) findViewById(R.id.seven);
-                            ImageView eight = (ImageView) findViewById(R.id.eight);
-                            ImageView nine = (ImageView) findViewById(R.id.nine);
-
-                            one.setEnabled(true);
-                            two.setEnabled(true);
-                            three.setEnabled(true);
-                            four.setEnabled(true);
-                            five.setEnabled(true);
-                            six.setEnabled(true);
-                            seven.setEnabled(true);
-                            eight.setEnabled(true);
-                            nine.setEnabled(true);
-
-                            one.setImageResource(R.drawable.transp);
-                            one.animate().rotation(0);
-                            two.setImageResource(R.drawable.transp);
-                            two.animate().rotation(0);
-                            three.setImageResource(R.drawable.transp);
-                            three.animate().rotation(0);
-                            four.setImageResource(R.drawable.transp);
-                            four.animate().rotation(0);
-                            five.setImageResource(R.drawable.transp);
-                            five.animate().rotation(0);
-                            six.setImageResource(R.drawable.transp);
-                            six.animate().rotation(0);
-                            seven.setImageResource(R.drawable.transp);
-                            seven.animate().rotation(0);
-                            eight.setImageResource(R.drawable.transp);
-                            eight.animate().rotation(0);
-                            nine.setImageResource(R.drawable.transp);
-                            nine.animate().rotation(0);
-
-                            ImageView player = (ImageView) findViewById(R.id.currentPlayer);
-                            player.setImageResource(R.drawable.x);
-
-                            ImageView gridImg = (ImageView) findViewById(R.id.imageView);
-                            gridImg.setImageResource(R.drawable.grid);
-                        }
-
-                    })
-                    .setNegativeButton("F", null)
-                    .show();
         }
     }
-
+    //reset grid and images
     public void resetBtn(View view){
         for(int i=0; i<9; i++){
             grid[i]=2;
@@ -375,10 +313,10 @@ public class MainActivity extends AppCompatActivity {
         gridImg.setImageResource(R.drawable.grid);
     }
 
+    //exit dialog
     @Override
     public void onBackPressed() {
         new AlertDialog.Builder(this)
-                .setIcon(android.R.drawable.ic_dialog_alert)
                 .setTitle("Closing Activity")
                 .setMessage("Are you sure you want to close this activity?")
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener()
