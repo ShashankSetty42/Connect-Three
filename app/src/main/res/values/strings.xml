@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">TicTacToe</string>
+    <string name="playerOne">Player One</string>
+    <string name="playerTwo">Player Two</string>
+    <string name="exitstr">Are you sure you want to exit?</string>
+    <string name="player">Current Player :</string>
+    <string name="oneWin">Congratulations Player One Wins! Do you want to play again?</string>
+    <string name="twoWin">Congratulations Player Two Wins! Do you want to play again?</string>
+    <string name="draw">That\'s a draw! Do you want to play again?</string>
+    <string name="playAgain">Play Again</string>
+    <string name="gameFinished">Game Finished</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+</resources>
