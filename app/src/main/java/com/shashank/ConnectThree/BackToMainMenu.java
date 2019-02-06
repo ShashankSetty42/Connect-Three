@@ -9,12 +9,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 
-public class DrawDialog extends AppCompatDialogFragment {
+public class BackToMainMenu extends AppCompatDialogFragment {
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         LayoutInflater inflater = getActivity().getLayoutInflater();
-        View view = inflater.inflate(R.layout.draw, null);
+        View view = inflater.inflate(R.layout.main_menu, null);
         builder.setView(view);
         final AlertDialog drawDialog =  builder.create();
         drawDialog.getWindow().setBackgroundDrawable(new ColorDrawable(0));
@@ -29,8 +29,7 @@ public class DrawDialog extends AppCompatDialogFragment {
         yesBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((pvp)getActivity()).resetBoard();
-                dismiss();
+                getActivity().finish();
             }
         });
         return drawDialog;

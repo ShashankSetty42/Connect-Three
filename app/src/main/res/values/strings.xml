@@ -11,4 +11,5 @@
     <string name="gameFinished">Game Finished</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
+    <string name="BackToMenu">Do you want to return to main menu?</string>
 </resources>

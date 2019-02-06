@@ -29,7 +29,7 @@ public class PlayerOneWinDialog extends AppCompatDialogFragment {
         yesBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((MainActivity)getActivity()).resetBoard();
+                ((pvp)getActivity()).resetBoard();
                 dismiss();
             }
         });
