@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".pvp">
+    tools:context=".pvp"
+    android:background="@drawable/withoutgrid">
 
     <TextView
         android:id="@+id/title"
@@ -14,7 +15,7 @@
         android:layout_marginTop="25dp"
         android:fontFamily="@font/raleway_bold"
         android:text="Multi Player"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -24,13 +25,14 @@
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="17dp"
-        android:layout_marginBottom="46dp"
+        android:layout_marginEnd="30dp"
         android:background="@drawable/btn_shape"
         android:onClick="resetBtn"
         android:text="Reset"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.928" />
 
 
     <ImageView
@@ -171,7 +173,7 @@
         app:srcCompat="@drawable/grid" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/gametitile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
@@ -184,7 +186,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.929" />
+        app:layout_constraintVertical_bias="0.929"
+        android:textColor="@android:color/white"/>
 
     <ImageView
         android:id="@+id/currentPlayer"
@@ -192,7 +195,7 @@
         android:layout_height="25dp"
         android:layout_marginStart="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintStart_toEndOf="@+id/gametitile"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.92"
         app:srcCompat="@drawable/transp" />

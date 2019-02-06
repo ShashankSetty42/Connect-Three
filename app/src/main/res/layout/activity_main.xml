@@ -4,49 +4,107 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/withoutgrid">
 
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="wrap_content"
+    <android.support.v7.widget.GridLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="25dp"
-        android:fontFamily="@font/raleway_bold"
-        android:text="Connect Three"
-        android:textColor="@android:color/black"
-        android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/singlePlayer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:onClick="sPlayer"
-        android:text="Single Player"
+        android:padding="10dp"
+        android:paddingBottom="40dp"
+        app:columnCount="2"
+        app:columnOrderPreserved="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.755"
+        app:rowCount="1">
 
-    <Button
-        android:id="@+id/multiplayer"
-        android:layout_width="wrap_content"
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardView1"
+            android:layout_width="170dp"
+            android:layout_height="290dp"
+            android:layout_margin="12dp"
+            app:cardBackgroundColor="@color/backgroundColor"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="10dp"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1">
+
+            <ImageButton
+                android:id="@+id/singleplayer"
+                android:layout_width="150dp"
+                android:layout_height="170dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@null"
+                android:onClick="sPlayer"
+                android:paddingBottom="20dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/robotfinal2" />
+
+            <TextView
+                android:id="@+id/singleplayertext"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom|center_horizontal"
+                android:paddingBottom="16dp"
+                android:text="Single Player"
+                android:textColor="@android:color/white"
+                android:textSize="24sp" />
+
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_width="170dp"
+            android:layout_height="290dp"
+            android:layout_margin="12dp"
+            app:cardBackgroundColor="@color/backgroundColor"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="10dp"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1">
+
+            <ImageButton
+                android:id="@+id/multiplayer"
+                android:layout_width="150dp"
+                android:layout_height="170dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@null"
+                android:onClick="sPlayer"
+                android:paddingBottom="20dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/playerfinal" />
+
+            <TextView
+                android:id="@+id/multiplayertext"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom|center_horizontal"
+                android:paddingBottom="16dp"
+                android:text="Multiplayer"
+                android:textColor="@android:color/white"
+                android:textSize="24sp" />
+
+
+        </android.support.v7.widget.CardView>
+
+
+    </android.support.v7.widget.GridLayout>
+
+    <TextView
+        android:id="@+id/gametitile"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="71dp"
-        android:layout_marginEnd="8dp"
-        android:onClick="mPlayer"
-        android:text="Multiplayer"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/singlePlayer" />
-
-
+        android:layout_marginTop="48dp"
+        android:gravity="center"
+        android:text="Connect Three"
+        android:textColor="@android:color/white"
+        android:textSize="42sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="68dp" />
 </android.support.constraint.ConstraintLayout>

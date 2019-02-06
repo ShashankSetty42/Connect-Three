@@ -416,18 +416,18 @@ public class singlePlayer extends AppCompatActivity {
 
         if(draw == 1) {
 
-            DrawDialog draw = new DrawDialog();;
+            DrawDialogSingle draw = new DrawDialogSingle();;
             draw.show(getSupportFragmentManager(), "draw diag");
 
         }
         else{
 
             if(winner == 1) {
-                PlayerOneWinDialogPVP oneDialog = new PlayerOneWinDialogPVP();
+                PlayerOneWinDialogSingle oneDialog = new PlayerOneWinDialogSingle();
                 oneDialog.show(getSupportFragmentManager(), "oneWIn diag");
             }
             else {
-                PlayerTwoWinDialogPVP twoDialog = new PlayerTwoWinDialogPVP();
+                PlayerTwoWinDialogSingle twoDialog = new PlayerTwoWinDialogSingle();
                 twoDialog.show(getSupportFragmentManager(), "twoWin diag");
             }
 

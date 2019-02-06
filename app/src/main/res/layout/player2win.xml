@@ -18,7 +18,8 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@android:color/white"/>
 
     <TextView
         android:id="@+id/alertDesc"
@@ -30,7 +31,8 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@android:color/white"/>
 
     <Button
         android:id="@+id/yes"
@@ -38,7 +40,7 @@
         android:layout_height="35dp"
         android:layout_marginTop="36dp"
         android:layout_marginEnd="8dp"
-        android:background="@drawable/alert_btn"
+        android:background="@drawable/btn_shape"
         android:text="@string/yes"
         android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
@@ -52,7 +54,7 @@
         android:layout_marginEnd="8dp"
         android:background="@android:color/transparent"
         android:text="@string/no"
-        android:textColor="#4768fd"
+        android:textColor="@android:color/white"
         app:layout_constraintEnd_toStartOf="@+id/yes"
         app:layout_constraintTop_toBottomOf="@+id/alertDesc" />
 </android.support.constraint.ConstraintLayout>

@@ -239,11 +239,11 @@ public class pvp extends AppCompatActivity {
         else{
 
             if(winner == 1) {
-                PlayerOneWinDialogSingle oneDialog = new PlayerOneWinDialogSingle();
+                PlayerOneWinDialogPVP oneDialog = new PlayerOneWinDialogPVP();
                 oneDialog.show(getSupportFragmentManager(), "oneWIn diag");
             }
             else {
-                PlayerTwoWinDialogSingle twoDialog = new PlayerTwoWinDialogSingle();
+                PlayerTwoWinDialogPVP twoDialog = new PlayerTwoWinDialogPVP();
                 twoDialog.show(getSupportFragmentManager(), "twoWin diag");
             }
 
