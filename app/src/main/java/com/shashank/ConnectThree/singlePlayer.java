@@ -1,8 +1,6 @@
 package com.shashank.ConnectThree;
 
-import android.content.DialogInterface;
 import android.os.Handler;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,7 +9,6 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import java.util.Random;
-import java.util.TimerTask;
 
 public class singlePlayer extends AppCompatActivity {
 
@@ -332,6 +329,7 @@ public class singlePlayer extends AppCompatActivity {
             }
         }
     }
+
     //reset board
     public void resetBoard(){
         for(int i=0; i<9; i++){
@@ -425,11 +423,11 @@ public class singlePlayer extends AppCompatActivity {
         else{
 
             if(winner == 1) {
-                PlayerOneWinDialog oneDialog = new PlayerOneWinDialog();
+                PlayerOneWinDialogPVP oneDialog = new PlayerOneWinDialogPVP();
                 oneDialog.show(getSupportFragmentManager(), "oneWIn diag");
             }
             else {
-                PlayerTwoWinDialog twoDialog = new PlayerTwoWinDialog();
+                PlayerTwoWinDialogPVP twoDialog = new PlayerTwoWinDialogPVP();
                 twoDialog.show(getSupportFragmentManager(), "twoWin diag");
             }
 

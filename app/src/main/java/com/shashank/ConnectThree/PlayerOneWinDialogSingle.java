@@ -9,15 +9,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 
-public class PlayerTwoWinDialog extends AppCompatDialogFragment {
+public class PlayerOneWinDialogSingle extends AppCompatDialogFragment {
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         LayoutInflater inflater = getActivity().getLayoutInflater();
-        View view = inflater.inflate(R.layout.player2win, null);
+        View view = inflater.inflate(R.layout.player1win, null);
         builder.setView(view);
-        final AlertDialog twoWin =  builder.create();
-        twoWin.getWindow().setBackgroundDrawable(new ColorDrawable(0));
+        final AlertDialog oneWin =  builder.create();
+        oneWin.getWindow().setBackgroundDrawable(new ColorDrawable(0));
         Button noBtn = (Button) view.findViewById(R.id.no);
         noBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,6 +33,6 @@ public class PlayerTwoWinDialog extends AppCompatDialogFragment {
                 dismiss();
             }
         });
-        return twoWin;
+        return oneWin;
     }
 }

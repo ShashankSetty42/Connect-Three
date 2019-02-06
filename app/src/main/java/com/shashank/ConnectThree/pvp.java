@@ -1,7 +1,5 @@
 package com.shashank.ConnectThree;
 
-import android.content.DialogInterface;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -241,11 +239,11 @@ public class pvp extends AppCompatActivity {
         else{
 
             if(winner == 1) {
-                PlayerOneWinDialog oneDialog = new PlayerOneWinDialog();
+                PlayerOneWinDialogSingle oneDialog = new PlayerOneWinDialogSingle();
                 oneDialog.show(getSupportFragmentManager(), "oneWIn diag");
             }
             else {
-                PlayerTwoWinDialog twoDialog = new PlayerTwoWinDialog();
+                PlayerTwoWinDialogSingle twoDialog = new PlayerTwoWinDialogSingle();
                 twoDialog.show(getSupportFragmentManager(), "twoWin diag");
             }
 
