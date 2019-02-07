@@ -11,14 +11,34 @@
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="25dp"
-        android:fontFamily="@font/raleway_bold"
-        android:text="Multi Player"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="36dp"
+        android:text="Multiplayer"
         android:textColor="@android:color/white"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="72dp"
+        android:layout_height="wrap_content"
+        android:onClick="backBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="48dp"
+            android:onClick="backBtn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back" />
+
+    </LinearLayout>
+
 
     <Button
         android:id="@+id/resetBtn"
@@ -179,9 +199,7 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
-        android:fontFamily="@font/raleway"
         android:text="@string/player"
-        android:textAppearance="@style/TextAppearance.AppCompat"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -199,5 +217,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.92"
         app:srcCompat="@drawable/transp" />
+
+
 
 </android.support.constraint.ConstraintLayout>

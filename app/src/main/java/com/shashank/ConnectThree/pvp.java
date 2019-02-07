@@ -1,10 +1,12 @@
 package com.shashank.ConnectThree;
 
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class pvp extends AppCompatActivity {
@@ -15,6 +17,17 @@ public class pvp extends AppCompatActivity {
         setContentView(R.layout.activity_pvp);
         ImageView player = (ImageView) findViewById(R.id.currentPlayer); //set current player 1 after reset
         player.setImageResource(R.drawable.x);
+
+        TextView tx = (TextView)findViewById(R.id.title);
+        TextView tx1 = (TextView)findViewById(R.id.gametitile);
+
+
+        Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/typobold.otf");
+        Typeface custom_font2 = Typeface.createFromAsset(getAssets(),  "fonts/typoreg.otf");
+
+        tx.setTypeface(custom_font);
+        tx1.setTypeface(custom_font2);
+
     }
 
     //global initialisation
@@ -305,6 +318,11 @@ public class pvp extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
+        BackToMainMenu backDialog = new BackToMainMenu();
+        backDialog.show(getSupportFragmentManager(), "backdiag");
+    }
+
+    public void backBtn (View view){
         BackToMainMenu backDialog = new BackToMainMenu();
         backDialog.show(getSupportFragmentManager(), "backdiag");
     }

@@ -1,11 +1,13 @@
 package com.shashank.ConnectThree;
 
+import android.graphics.Typeface;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.Random;
@@ -18,6 +20,16 @@ public class singlePlayer extends AppCompatActivity {
         setContentView(R.layout.activity_single_player);
         ImageView player = (ImageView) findViewById(R.id.currentPlayer); //set current player 1 after reset
         player.setImageResource(R.drawable.x);
+
+        TextView tx = (TextView)findViewById(R.id.title);
+        TextView tx1 = (TextView)findViewById(R.id.gametitile);
+
+
+        Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/typobold.otf");
+        Typeface custom_font2 = Typeface.createFromAsset(getAssets(),  "fonts/typoreg.otf");
+
+        tx.setTypeface(custom_font);
+        tx1.setTypeface(custom_font2);
     }
 
     //global initialisation
@@ -117,6 +129,7 @@ public class singlePlayer extends AppCompatActivity {
     public void botTurn(){
         Random randomvar = new Random();
         int number = randomvar.nextInt(9);
+        Log.i("random number generated","random number is :" + number);
         ImageView one = (ImageView) findViewById(R.id.one);
         ImageView two = (ImageView) findViewById(R.id.two);
         ImageView three = (ImageView) findViewById(R.id.three);
@@ -126,18 +139,21 @@ public class singlePlayer extends AppCompatActivity {
         ImageView seven = (ImageView) findViewById(R.id.seven);
         ImageView eight = (ImageView) findViewById(R.id.eight);
         ImageView nine = (ImageView) findViewById(R.id.nine);
-
-        switch (number){
-            case 0:
-                    if(isEmpty(Integer.parseInt(one.getTag().toString()))){
+        if(grid[number] < 2 ){
+            botTurn();
+        }
+        else {
+            switch (number) {
+                case 0:
+                    if (isEmpty(Integer.parseInt(one.getTag().toString()))) {
                         grid[0] = 1;
                         one.setImageResource(R.drawable.o);
                         one.animate().rotation(180).setDuration(500);
-                        if(isWin()) {
+                        if (isWin()) {
                             endGame();
                             return;
                         }
-                        if(isDraw()) {
+                        if (isDraw()) {
                             draw = 1;
                             endGame();
                             return;
@@ -146,150 +162,151 @@ public class singlePlayer extends AppCompatActivity {
                         player = 0;
                         break;
                     }
-            case 1:
-                if(isEmpty(Integer.parseInt(two.getTag().toString()))){
-                    grid[1] = 1;
-                    two.setImageResource(R.drawable.o);
-                    two.animate().rotation(180).setDuration(500);
-                    if(isWin()) {
-                        endGame();
-                        return;
+                case 1:
+                    if (isEmpty(Integer.parseInt(two.getTag().toString()))) {
+                        grid[1] = 1;
+                        two.setImageResource(R.drawable.o);
+                        two.animate().rotation(180).setDuration(500);
+                        if (isWin()) {
+                            endGame();
+                            return;
+                        }
+                        if (isDraw()) {
+                            draw = 1;
+                            endGame();
+                            return;
+                        }
+                        setPlayer();
+                        player = 0;
+                        break;
                     }
-                    if(isDraw()) {
-                        draw = 1;
-                        endGame();
-                        return;
+                case 2:
+                    if (isEmpty(Integer.parseInt(three.getTag().toString()))) {
+                        grid[2] = 1;
+                        three.setImageResource(R.drawable.o);
+                        three.animate().rotation(180).setDuration(500);
+                        if (isWin()) {
+                            endGame();
+                            return;
+                        }
+                        if (isDraw()) {
+                            draw = 1;
+                            endGame();
+                            return;
+                        }
+                        setPlayer();
+                        player = 0;
+                        break;
                     }
-                    setPlayer();
-                    player = 0;
-                    break;
-                }
-            case 2:
-                if(isEmpty(Integer.parseInt(three.getTag().toString()))){
-                    grid[2] = 1;
-                    three.setImageResource(R.drawable.o);
-                    three.animate().rotation(180).setDuration(500);
-                    if(isWin()) {
-                        endGame();
-                        return;
+                case 3:
+                    if (isEmpty(Integer.parseInt(four.getTag().toString()))) {
+                        grid[3] = 1;
+                        four.setImageResource(R.drawable.o);
+                        four.animate().rotation(180).setDuration(500);
+                        if (isWin()) {
+                            endGame();
+                            return;
+                        }
+                        if (isDraw()) {
+                            draw = 1;
+                            endGame();
+                            return;
+                        }
+                        setPlayer();
+                        player = 0;
+                        break;
                     }
-                    if(isDraw()) {
-                        draw = 1;
-                        endGame();
-                        return;
+                case 4:
+                    if (isEmpty(Integer.parseInt(five.getTag().toString()))) {
+                        grid[4] = 1;
+                        five.setImageResource(R.drawable.o);
+                        five.animate().rotation(180).setDuration(500);
+                        if (isWin()) {
+                            endGame();
+                            return;
+                        }
+                        if (isDraw()) {
+                            draw = 1;
+                            endGame();
+                            return;
+                        }
+                        setPlayer();
+                        player = 0;
+                        break;
                     }
-                    setPlayer();
-                    player = 0;
-                    break;
-                }
-            case 3:
-                if(isEmpty(Integer.parseInt(four.getTag().toString()))){
-                    grid[3] = 1;
-                    four.setImageResource(R.drawable.o);
-                    four.animate().rotation(180).setDuration(500);
-                    if(isWin()) {
-                        endGame();
-                        return;
+                case 5:
+                    if (isEmpty(Integer.parseInt(six.getTag().toString()))) {
+                        grid[5] = 1;
+                        six.setImageResource(R.drawable.o);
+                        six.animate().rotation(180).setDuration(500);
+                        if (isWin()) {
+                            endGame();
+                            return;
+                        }
+                        if (isDraw()) {
+                            draw = 1;
+                            endGame();
+                            return;
+                        }
+                        setPlayer();
+                        player = 0;
+                        break;
                     }
-                    if(isDraw()) {
-                        draw = 1;
-                        endGame();
-                        return;
+                case 6:
+                    if (isEmpty(Integer.parseInt(seven.getTag().toString()))) {
+                        grid[6] = 1;
+                        seven.setImageResource(R.drawable.o);
+                        seven.animate().rotation(180).setDuration(500);
+                        if (isWin()) {
+                            endGame();
+                            return;
+                        }
+                        if (isDraw()) {
+                            draw = 1;
+                            endGame();
+                            return;
+                        }
+                        setPlayer();
+                        player = 0;
+                        break;
                     }
-                    setPlayer();
-                    player = 0;
-                    break;
-                }
-            case 4:
-                if(isEmpty(Integer.parseInt(five.getTag().toString()))){
-                    grid[4] = 1;
-                    five.setImageResource(R.drawable.o);
-                    five.animate().rotation(180).setDuration(500);
-                    if(isWin()) {
-                        endGame();
-                        return;
+                case 7:
+                    if (isEmpty(Integer.parseInt(eight.getTag().toString()))) {
+                        grid[7] = 1;
+                        eight.setImageResource(R.drawable.o);
+                        eight.animate().rotation(180).setDuration(500);
+                        if (isWin()) {
+                            endGame();
+                            return;
+                        }
+                        if (isDraw()) {
+                            draw = 1;
+                            endGame();
+                            return;
+                        }
+                        setPlayer();
+                        player = 0;
+                        break;
                     }
-                    if(isDraw()) {
-                        draw = 1;
-                        endGame();
-                        return;
+                case 8:
+                    if (isEmpty(Integer.parseInt(nine.getTag().toString()))) {
+                        grid[8] = 1;
+                        nine.setImageResource(R.drawable.o);
+                        nine.animate().rotation(180).setDuration(500);
+                        if (isWin()) {
+                            endGame();
+                            return;
+                        }
+                        if (isDraw()) {
+                            draw = 1;
+                            endGame();
+                            return;
+                        }
+                        setPlayer();
+                        player = 0;
+                        break;
                     }
-                    setPlayer();
-                    player = 0;
-                    break;
-                }
-            case 5:
-                if(isEmpty(Integer.parseInt(six.getTag().toString()))){
-                    grid[5] = 1;
-                    six.setImageResource(R.drawable.o);
-                    six.animate().rotation(180).setDuration(500);
-                    if(isWin()) {
-                        endGame();
-                        return;
-                    }
-                    if(isDraw()) {
-                        draw = 1;
-                        endGame();
-                        return;
-                    }
-                    setPlayer();
-                    player = 0;
-                    break;
-                }
-            case 6:
-                if(isEmpty(Integer.parseInt(seven.getTag().toString()))){
-                    grid[6] = 1;
-                    seven.setImageResource(R.drawable.o);
-                    seven.animate().rotation(180).setDuration(500);
-                    if(isWin()) {
-                        endGame();
-                        return;
-                    }
-                    if(isDraw()) {
-                        draw = 1;
-                        endGame();
-                        return;
-                    }
-                    setPlayer();
-                    player = 0;
-                    break;
-                }
-            case 7:
-                if(isEmpty(Integer.parseInt(eight.getTag().toString()))){
-                    grid[7] = 1;
-                    eight.setImageResource(R.drawable.o);
-                    eight.animate().rotation(180).setDuration(500);
-                    if(isWin()) {
-                        endGame();
-                        return;
-                    }
-                    if(isDraw()) {
-                        draw = 1;
-                        endGame();
-                        return;
-                    }
-                    setPlayer();
-                    player = 0;
-                    break;
-                }
-            case 8:
-                if(isEmpty(Integer.parseInt(nine.getTag().toString()))){
-                    grid[8] = 1;
-                    nine.setImageResource(R.drawable.o);
-                    nine.animate().rotation(180).setDuration(500);
-                    if(isWin()) {
-                        endGame();
-                        return;
-                    }
-                    if(isDraw()) {
-                        draw = 1;
-                        endGame();
-                        return;
-                    }
-                    setPlayer();
-                    player = 0;
-                    break;
-                }
+            }
         }
     }
 
@@ -489,6 +506,11 @@ public class singlePlayer extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
+        BackToMainMenu backDialog = new BackToMainMenu();
+        backDialog.show(getSupportFragmentManager(), "backdiag");
+    }
+
+    public void backBtn (View view){
         BackToMainMenu backDialog = new BackToMainMenu();
         backDialog.show(getSupportFragmentManager(), "backdiag");
     }

@@ -28,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
 
         Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/typobold.otf");
         Typeface custom_font2 = Typeface.createFromAsset(getAssets(),  "fonts/typoreg.otf");
-        Typeface custom_font3 = Typeface.createFromAsset(getAssets(),  "fonts/typoreg.otf");
 
         tx.setTypeface(custom_font);
         tx1.setTypeface(custom_font2);
@@ -37,10 +36,12 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void sPlayer (View view){
+
         startActivity(new Intent(MainActivity.this, singlePlayer.class));
 
     }
     public void mPlayer (View view){
+
         startActivity(new Intent(MainActivity.this, pvp.class));
     }
 
@@ -50,6 +51,11 @@ public class MainActivity extends AppCompatActivity {
     //exit dialog
     @Override
     public void onBackPressed() {
+        ExitDiag exitDialog = new ExitDiag();
+        exitDialog.show(getSupportFragmentManager(), "exit");
+    }
+
+    public void exitBtn(View view){
         ExitDiag exitDialog = new ExitDiag();
         exitDialog.show(getSupportFragmentManager(), "exit");
     }
