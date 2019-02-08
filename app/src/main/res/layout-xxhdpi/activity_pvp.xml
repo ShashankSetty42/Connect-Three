@@ -13,13 +13,13 @@
         android:layout_height="wrap_content"
         android:text="Multiplayer"
         android:textColor="@android:color/white"
-        android:textSize="24sp"
+        android:textSize="32sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.266"
+        app:layout_constraintHorizontal_bias="0.257"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.04" />
+        app:layout_constraintVertical_bias="0.03" />
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -45,8 +45,8 @@
     </RelativeLayout>
 
     <android.support.constraint.ConstraintLayout
-        android:layout_width="320dp"
-        android:layout_height="320dp"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -298,7 +298,7 @@
         android:layout_marginBottom="8dp"
         android:text="@string/player"
         android:textColor="@android:color/white"
-        android:textSize="18sp"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.055"
@@ -320,20 +320,20 @@
     <Button
         android:id="@+id/resetBtn"
         style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="60dp"
-        android:layout_height="30dp"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/btn_shape"
         android:onClick="resetBtn"
         android:text="Reset"
-        android:textSize="10dp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.967"
+        app:layout_constraintHorizontal_bias="0.974"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.931" />
+        app:layout_constraintVertical_bias="0.94" />
 
 
 </android.support.constraint.ConstraintLayout>

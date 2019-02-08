@@ -25,6 +25,9 @@ public class MainActivity extends AppCompatActivity {
         TextView tx = (TextView)findViewById(R.id.gametitile);
         TextView tx1 = (TextView)findViewById(R.id.singleplayertext);
         TextView tx2 = (TextView)findViewById(R.id.multiplayertext);
+        TextView tx3 = (TextView)findViewById(R.id.exitBtnText);
+
+
 
         Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/typobold.otf");
         Typeface custom_font2 = Typeface.createFromAsset(getAssets(),  "fonts/typoreg.otf");
@@ -32,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         tx.setTypeface(custom_font);
         tx1.setTypeface(custom_font2);
         tx2.setTypeface(custom_font2);
+        tx3.setTypeface(custom_font2);
     }
 
 

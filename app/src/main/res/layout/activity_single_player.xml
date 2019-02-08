@@ -64,8 +64,8 @@
         android:foregroundGravity="center"
         android:onClick="clickedLayout"
         android:tag="0"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/grid"
+        app:layout_constraintTop_toTopOf="@+id/grid"
         app:srcCompat="@drawable/transp" />
 
     <ImageView
@@ -77,8 +77,8 @@
         android:clickable="true"
         android:onClick="clickedLayout"
         android:tag="1"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/grid"
+        app:layout_constraintTop_toTopOf="@+id/grid"
         app:srcCompat="@drawable/transp" />
 
     <ImageView
@@ -90,8 +90,8 @@
         android:clickable="true"
         android:onClick="clickedLayout"
         android:tag="2"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/grid"
+        app:layout_constraintTop_toTopOf="@+id/grid"
         app:srcCompat="@drawable/transp" />
 
 
@@ -105,8 +105,8 @@
         android:clickable="true"
         android:onClick="clickedLayout"
         android:tag="3"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/grid"
+        app:layout_constraintTop_toTopOf="@+id/grid"
         app:srcCompat="@drawable/transp" />
 
     <ImageView
@@ -118,8 +118,8 @@
         android:clickable="true"
         android:onClick="clickedLayout"
         android:tag="4"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/grid"
+        app:layout_constraintTop_toTopOf="@+id/grid"
         app:srcCompat="@drawable/transp" />
 
     <ImageView
@@ -131,8 +131,8 @@
         android:clickable="true"
         android:onClick="clickedLayout"
         android:tag="5"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/grid"
+        app:layout_constraintTop_toTopOf="@+id/grid"
         app:srcCompat="@drawable/transp" />
 
 
@@ -145,8 +145,8 @@
         android:clickable="true"
         android:onClick="clickedLayout"
         android:tag="6"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/grid"
+        app:layout_constraintTop_toTopOf="@+id/grid"
         app:srcCompat="@drawable/transp" />
 
     <ImageView
@@ -158,8 +158,8 @@
         android:clickable="true"
         android:onClick="clickedLayout"
         android:tag="7"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/grid"
+        app:layout_constraintTop_toTopOf="@+id/grid"
         app:srcCompat="@drawable/transp" />
 
     <ImageView
@@ -171,12 +171,12 @@
         android:clickable="true"
         android:onClick="clickedLayout"
         android:tag="8"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/grid"
+        app:layout_constraintTop_toTopOf="@+id/grid"
         app:srcCompat="@drawable/transp" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/grid"
         android:layout_width="400dp"
         android:layout_height="400dp"
         android:layout_gravity="center"

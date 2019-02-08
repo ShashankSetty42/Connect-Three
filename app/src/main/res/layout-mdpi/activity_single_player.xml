@@ -16,7 +16,7 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.266"
+        app:layout_constraintHorizontal_bias="0.272"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.04" />
@@ -45,8 +45,8 @@
     </RelativeLayout>
 
     <android.support.constraint.ConstraintLayout
-        android:layout_width="320dp"
-        android:layout_height="320dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -320,20 +320,21 @@
     <Button
         android:id="@+id/resetBtn"
         style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="60dp"
-        android:layout_height="30dp"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/btn_shape"
+        android:fontFamily="sans-serif-medium"
         android:onClick="resetBtn"
         android:text="Reset"
-        android:textSize="10dp"
+        android:textSize="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.967"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.931" />
+        app:layout_constraintVertical_bias="0.94" />
 
 
 </android.support.constraint.ConstraintLayout>

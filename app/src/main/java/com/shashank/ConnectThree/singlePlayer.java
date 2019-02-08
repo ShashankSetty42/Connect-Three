@@ -65,7 +65,7 @@ public class singlePlayer extends AppCompatActivity {
     }
     //check if someone won
     public boolean isWin(){
-        ImageView board = (ImageView) findViewById(R.id.imageView);
+        ImageView board = (ImageView) findViewById(R.id.grid);
         int winner = player + 1;
         if(isEq(grid[0],grid[3],grid[6])) {
             board.setImageResource(R.drawable.zerothreesix);
@@ -397,7 +397,7 @@ public class singlePlayer extends AppCompatActivity {
         ImageView player = (ImageView) findViewById(R.id.currentPlayer);
         player.setImageResource(R.drawable.x);
 
-        ImageView gridImg = (ImageView) findViewById(R.id.imageView);
+        ImageView gridImg = (ImageView) findViewById(R.id.grid);
         gridImg.setImageResource(R.drawable.grid);
     }
 
@@ -500,7 +500,7 @@ public class singlePlayer extends AppCompatActivity {
         ImageView player = (ImageView) findViewById(R.id.currentPlayer);
         player.setImageResource(R.drawable.x);
 
-        ImageView gridImg = (ImageView) findViewById(R.id.imageView);
+        ImageView gridImg = (ImageView) findViewById(R.id.grid);
         gridImg.setImageResource(R.drawable.grid);
     }
 

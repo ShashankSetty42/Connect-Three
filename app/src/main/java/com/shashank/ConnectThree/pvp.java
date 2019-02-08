@@ -33,7 +33,6 @@ public class pvp extends AppCompatActivity {
     //global initialisation
     int[] grid = {2,2,2,2,2,2,2,2,2};
     int player = 0; //0 is player 1 and 1 is player 2
-    int displayPl;
     //set current player
     public void setPlayer(){
         ImageView currentPlayer = (ImageView) findViewById(R.id.currentPlayer);
@@ -63,7 +62,7 @@ public class pvp extends AppCompatActivity {
     }
     //check if someone won
     public boolean isWin(){
-        ImageView board = (ImageView) findViewById(R.id.imageView);
+        ImageView board = (ImageView) findViewById(R.id.grid);
         int winner = player + 1;
         if(isEq(grid[0],grid[3],grid[6])) {
             board.setImageResource(R.drawable.zerothreesix);
@@ -209,7 +208,7 @@ public class pvp extends AppCompatActivity {
         ImageView player = (ImageView) findViewById(R.id.currentPlayer);
         player.setImageResource(R.drawable.x);
 
-        ImageView gridImg = (ImageView) findViewById(R.id.imageView);
+        ImageView gridImg = (ImageView) findViewById(R.id.grid);
         gridImg.setImageResource(R.drawable.grid);
     }
 
@@ -312,7 +311,7 @@ public class pvp extends AppCompatActivity {
         ImageView player = (ImageView) findViewById(R.id.currentPlayer);
         player.setImageResource(R.drawable.x);
 
-        ImageView gridImg = (ImageView) findViewById(R.id.imageView);
+        ImageView gridImg = (ImageView) findViewById(R.id.grid);
         gridImg.setImageResource(R.drawable.grid);
     }
 
