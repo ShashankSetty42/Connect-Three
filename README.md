@@ -6,5 +6,5 @@ A simple connect three game made for android using google's new material redesig
 
 <img src="https://i.imgur.com/LWUMHOs.png" height="450">  <img src="https://i.imgur.com/wL5gdwY.png" height="450">
 
-Currently only supports high DPI.
+
 
